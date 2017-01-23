@@ -1,0 +1,369 @@
+* {
+  box-sizing: border-box; }
+
+body, html {
+  font-family: "Open Sans", Helvtica, sans-serif; }
+
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table; }
+
+.clearfix:after {
+  clear: both; }
+
+.wrapper {
+  width: 1440px;
+  max-width: 90%;
+  margin: 0 auto; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 400; }
+
+a {
+  text-decoration: none; }
+
+ul,
+ol {
+  margin: 0;
+  padding: 0; }
+
+li {
+  list-style: none; }
+
+/************************* Header Styles ***************************/
+#navigation, #copyright {
+  padding: 0.8em 0;
+  background-color: #000; }
+  #navigation a, #copyright a {
+    color: #fff; }
+
+.menu {
+  display: none; }
+
+.logo img {
+  padding-top: .7em; }
+
+#main_navbar {
+  float: right; }
+
+#main_navbar li {
+  float: left;
+  margin-left: 5em;
+  padding: .8em 0; }
+
+#main_navbar li a {
+  display: block;
+  text-decoration: none;
+  font-size: .85em;
+  font-weight: 600;
+  color: #fff;
+  padding: 0.6em  0; }
+
+@media only screen and (max-width: 768px) {
+  #main_navbar {
+    display: none; }
+  #main_navbar.active {
+    display: block;
+    width: 100%;
+    margin: 1em 0; }
+    #main_navbar.active li {
+      display: block;
+      padding: 0.2em 0;
+      width: 100%;
+      margin: 0;
+      border-bottom: 1px solid #fff; }
+      #main_navbar.active li:hover {
+        background: #e1e1e1; }
+      #main_navbar.active li:last-child {
+        border-bottom: 0; }
+  .menu {
+    display: block;
+    float: right; }
+    .menu i {
+      font-size: 1.5em;
+      padding-top: .6em; } }
+
+/************************* Banner Styles ***************************/
+.btn_highlight {
+  color: #fff;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  background: #ed0029;
+  padding: 0.7em 1.5em;
+  transition: all .2s linear .2s; }
+  .btn_highlight:hover {
+    background-color: #f10505; }
+
+#banner {
+  background: url("../img/banner-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  padding: 1em 0 2.5em 0; }
+
+.banner_wrapper {
+  width: 900px;
+  max-width: 90%;
+  margin: 2em auto;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+#poster {
+  width: 275px;
+  position: relative;
+  float: left; }
+  #poster .featured {
+    width: 100%;
+    box-shadow: 0px 0px 57px 0px rgba(4, 6, 9, 0.8);
+    -moz-box-shadow: 0px 0px 57px 0px rgba(4, 6, 9, 0.8);
+    -webkit-box-shadow: 0px 0px 57px 0px rgba(4, 6, 9, 0.8); }
+
+#content {
+  color: #fff;
+  width: 60%;
+  margin: 0 auto; }
+  #content h1 {
+    font-size: 2.2em;
+    font-weight: 400;
+    margin: 0 0 .5em 0; }
+  #content p {
+    font-size: 1.05em;
+    line-height: 1.55em;
+    opacity: 0.8;
+    font-weight: 200; }
+  #content i {
+    color: #e3ac05;
+    font-size: 1.35em;
+    margin: 0 .2em; }
+  #content .inactive {
+    color: #515151; }
+
+@media only screen and (max-width: 768px) {
+  #banner {
+    padding: .55em 0; }
+  #poster {
+    width: 230px;
+    margin-bottom: 1.5em;
+    margin-top: 1.5em;
+    margin-right: 1.8em; }
+  #content {
+    color: #fff;
+    margin: 2em 0;
+    width: 100%; }
+    #content h1 {
+      font-size: 1.5em; }
+    #content p {
+      font-size: .9em; }
+    #content i {
+      color: #e3ac05;
+      font-size: 1em;
+      margin: 0 .2em; }
+    #content .btn_highlight {
+      padding: .6em 1.2em;
+      font-size: .8em; } }
+
+@media only screen and (min-width: 320px) and (max-width: 640px) {
+  .banner_wrapper {
+    display: inline-block; }
+  #poster {
+    width: 220px; }
+  #content h1 {
+    font-size: 1.6em;
+    margin: 0.2em 0; }
+  #content p {
+    font-size: .8em; } }
+
+/************************* Now Showing, Coming Soon, and Popular Styles ***************************/
+.row {
+  width: 100%;
+  margin: auto; }
+  .row .post {
+    width: 14%;
+    float: left;
+    margin-right: 3.2%;
+    text-align: center; }
+    .row .post img {
+      width: 100%;
+      max-width: 100%; }
+    .row .post .post_title {
+      font-size: .9em;
+      font-weight: 600;
+      margin: 1.6em 0 0 0;
+      color: #ed0029; }
+    .row .post .post_info {
+      font-size: .65em;
+      color: #000; }
+    .row .post:last-child {
+      margin-right: 0; }
+
+#now-showing,
+#coming-soon,
+#popular-movies {
+  margin: 3em 0; }
+  #now-showing header:before,
+  #coming-soon header:before,
+  #popular-movies header:before {
+    content: " ";
+    width: 45%;
+    max-width: 30%;
+    height: 5px;
+    background-color: #ed0029; }
+  #now-showing h2,
+  #coming-soon h2,
+  #popular-movies h2 {
+    display: inline-block;
+    font-size: 1.5em;
+    color: #515151; }
+
+.movie-nav {
+  float: right;
+  margin: 1.5em 0; }
+  .movie-nav li {
+    float: left;
+    margin-left: .8em; }
+    .movie-nav li a {
+      color: #0776ff;
+      font-size: .9em; }
+    .movie-nav li i {
+      color: #515151; }
+
+@media only screen and (max-width: 768px) {
+  .row {
+    width: 100%; }
+    .row .post {
+      width: 31.73%;
+      margin-right: 2.4%;
+      margin-bottom: 1.4em; }
+      .row .post:last-child, .row .post:nth-child(3) {
+        margin-right: 0; }
+      .row .post .post_title {
+        font-size: .85em; }
+  #now-showing h2,
+  #coming-soon h2,
+  #popular-movies h2 {
+    font-size: 1.2em; }
+  .movie-nav li a {
+    font-size: .8em; } }
+
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  .row .post {
+    width: 250px;
+    margin: 0 auto 2em auto;
+    float: none; }
+    .row .post:last-child, .row .post:nth-child(3) {
+      margin-right: auto; } }
+
+/************************* Newsletter ****************************/
+#newsletter {
+  padding: 4em 0;
+  text-align: center;
+  background: #515151;
+  color: #fff; }
+  #newsletter .inner_wrapper {
+    width: 600px;
+    margin: 0 auto;
+    max-width: 95%; }
+    #newsletter .inner_wrapper h2 {
+      font-size: 1.5em; }
+  #newsletter .sign_up {
+    margin-top: 2em; }
+    #newsletter .sign_up input[type="text"],
+    #newsletter .sign_up input[type="email"] {
+      width: 32%;
+      margin: 1em .5em;
+      height: 3.5em;
+      border: none;
+      outline: none;
+      background-color: #404043;
+      padding: .5em 1.25em;
+      font-size: .8em;
+      color: #fff; }
+    #newsletter .sign_up a {
+      margin: 1em .5em; }
+
+@media only screen and (min-width: 320px) and (max-width: 640px) {
+  #newsletter .inner_wrapper h2 {
+    font-size: 1.2em; }
+  #newsletter .inner_wrapper p {
+    font-size: .8em; }
+  #newsletter .sign_up input[type="text"],
+  #newsletter .sign_up input[type="email"] {
+    width: 100%;
+    display: block;
+    margin: 0.8em 0;
+    width: 100%; } }
+
+/************************* Footer Menu ****************************/
+#menu_links {
+  padding: 2em 0; }
+
+.links_wrapper {
+  float: left;
+  width: 28%;
+  margin-right: 8%; }
+  .links_wrapper:last-child {
+    margin-right: 0; }
+  .links_wrapper h3 {
+    font-size: 1.2em;
+    font-weight: 600;
+    color: #515151; }
+  .links_wrapper li {
+    margin: 1em 0; }
+  .links_wrapper a {
+    font-size: 1em;
+    font-weight: 200;
+    color: #515151; }
+    .links_wrapper a:hover {
+      color: #ed0029; }
+
+@media only screen and (max-width: 768px) {
+  .links_wrapper h3 {
+    font-size: .9em; }
+  .links_wrapper a {
+    font-size: .8em; } }
+
+@media only screen and (min-width: 320px) and (max-width: 640px) {
+  .links_wrapper {
+    display: block;
+    width: 100%; } }
+
+/************************* Copyright ****************************/
+#copyright p {
+  color: #fff;
+  display: inline-block;
+  font-size: .7em;
+  opacity: 0.5; }
+
+.social_icons {
+  float: right;
+  transition: opacity .2s linear 0s; }
+  .social_icons li {
+    float: left;
+    margin-left: 3em; }
+  .social_icons img {
+    padding-top: .8em; }
+  .social_icons a:hover {
+    opacity: 0.6; }
+
+@media only screen and (min-width: 320px) and (max-width: 575px) {
+  #copyright p,
+  #copyright .social_icons {
+    display: block;
+    width: 100%;
+    margin: .8em 0; }
+  #copyright .social_icons li:first-child {
+    margin-left: 0; } }
