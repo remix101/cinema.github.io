@@ -11,4 +11,6 @@ Link: https://remix101.github.io/democinema/
 
 Movie Posters from Joblo Movie Network http://www.joblo.com/movie-posters/
 
+Font: Open Sans
+
 Social icons from Iconfinder http://www.iconfinder.com
